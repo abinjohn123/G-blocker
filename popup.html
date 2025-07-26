@@ -7,6 +7,14 @@
 <body>
   <div class="container">
     <h2>Gaayamma Blocker</h2>
+    
+    <div class="timer-setup" id="timerSetup">
+      <div class="input-group">
+        <label for="focusMinutes">Focus time (minutes):</label>
+        <input type="number" id="focusMinutes" min="30" max="90" value="30" class="time-input">
+      </div>
+    </div>
+
     <div class="toggle-container">
       <label class="toggle-label">Study Mode</label>
       <div class="toggle-switch">
@@ -14,12 +22,26 @@
         <label for="studyMode" class="toggle-slider"></label>
       </div>
     </div>
+
+    <div class="timer-display" id="timerDisplay" style="display: none;">
+      <div class="countdown" id="countdown">30:00</div>
+      <div class="timer-label">remaining</div>
+    </div>
+
     <div class="status" id="status">Study mode is OFF</div>
     <div class="blocked-sites">
       <h3>Blocked Sites:</h3>
       <ul>
         <li>Instagram</li>
         <li>LinkedIn</li>
+        <li>Facebook</li>
+        <li>Twitter/X</li>
+        <li>TikTok</li>
+        <li>Reddit</li>
+        <li>Snapchat</li>
+        <li>Pinterest</li>
+        <li>Twitch</li>
+        <li>Discord</li>
       </ul>
     </div>
   </div>
