@@ -26,7 +26,10 @@
     "https://www.twitch.tv/*",
     "https://twitch.tv/*",
     "https://www.discord.com/*",
-    "https://discord.com/*"
+    "https://discord.com/*",
+    "https://app.manifoldkerala.com/*",
+    "https://manifoldkerala.com/*",
+    "https://*.manifoldkerala.com/*"
   ],
   "background": {
     "service_worker": "background.js"
