@@ -1,30 +1,22 @@
 const blockedSites = [
   "instagram.com",
-  "www.instagram.com",
   "linkedin.com",
-  "www.linkedin.com",
   "facebook.com",
-  "www.facebook.com",
   "twitter.com",
-  "www.twitter.com",
   "x.com",
-  "www.x.com",
-  "tiktok.com",
-  "www.tiktok.com",
   "reddit.com",
-  "www.reddit.com",
-  "snapchat.com",
-  "www.snapchat.com",
-  "pinterest.com",
-  "www.pinterest.com",
-  "twitch.tv",
-  "www.twitch.tv",
-  "discord.com",
-  "www.discord.com",
+  "pinterest.com"
 ];
 
 const isBlockedSite = (url) => {
-  return blockedSites.some((site) => url.includes(site));
+  if (!url) return false;
+  
+  try {
+    const hostname = new URL(url).hostname.replace(/^www\./, '');
+    return blockedSites.includes(hostname);
+  } catch {
+    return false;
+  }
 };
 
 const checkAndCloseTab = async (tabId, url) => {
