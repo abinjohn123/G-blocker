@@ -1,0 +1,123 @@
+body {
+  width: 280px;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f8f9fa;
+}
+
+.container {
+  padding: 20px;
+}
+
+h2 {
+  margin: 0 0 20px 0;
+  color: #1a73e8;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.toggle-label {
+  font-weight: 500;
+  color: #333;
+  font-size: 14px;
+}
+
+.toggle-switch {
+  position: relative;
+}
+
+.toggle-input {
+  display: none;
+}
+
+.toggle-slider {
+  width: 44px;
+  height: 24px;
+  background: #ccc;
+  border-radius: 24px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.toggle-slider::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  top: 2px;
+  left: 2px;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.toggle-input:checked + .toggle-slider {
+  background: #1a73e8;
+}
+
+.toggle-input:checked + .toggle-slider::after {
+  transform: translateX(20px);
+}
+
+.status {
+  text-align: center;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  background: #f1f3f4;
+  color: #5f6368;
+  margin-bottom: 20px;
+}
+
+.status.active {
+  background: #e8f5e8;
+  color: #137333;
+}
+
+.blocked-sites {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.blocked-sites h3 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.blocked-sites ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.blocked-sites li {
+  padding: 6px 0;
+  font-size: 13px;
+  color: #5f6368;
+  border-bottom: 1px solid #f1f3f4;
+}
+
+.blocked-sites li:last-child {
+  border-bottom: none;
+}

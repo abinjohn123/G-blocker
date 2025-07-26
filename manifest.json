@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Gaayamma Blocker",
+  "version": "1.0",
+  "description": "Block entertainment sites during study mode",
+  "permissions": ["tabs", "storage", "activeTab"],
+  "host_permissions": [
+    "https://www.instagram.com/*",
+    "https://instagram.com/*",
+    "https://www.linkedin.com/*",
+    "https://linkedin.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Gaayamma Blocker"
+  }
+}
