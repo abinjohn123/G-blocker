@@ -33,7 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const isStudyMode = studyModeToggle.checked;
     
     if (isStudyMode) {
-      const minutes = parseInt(focusMinutesInput.value);
+      const minutes = Math.round(parseFloat(focusMinutesInput.value));
+      
+      if (!focusMinutesInput.value || !minutes) {
+        studyModeToggle.checked = false;
+        return;
+      }
+      
       const timerEndTime = Date.now() + (minutes * 60 * 1000);
       
       chrome.storage.sync.set({ 
