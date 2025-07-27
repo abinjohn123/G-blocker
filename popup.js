@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const startTimer = (endTime) => {
     timerSetup.style.display = 'none';
     timerDisplay.style.display = 'block';
-    studyModeToggle.disabled = true;
+    document.querySelector('.toggle-container').style.display = 'none';
     updateStatus(true);
     
     const updateCountdown = () => {
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     timerSetup.style.display = 'block';
     timerDisplay.style.display = 'none';
-    studyModeToggle.disabled = false;
+    document.querySelector('.toggle-container').style.display = 'flex';
     studyModeToggle.checked = false;
     
     chrome.storage.sync.remove(['timerEndTime'], () => {
