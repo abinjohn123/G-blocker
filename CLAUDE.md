@@ -56,6 +56,41 @@ The extension uses Chrome's sync storage API for cross-device persistence:
 - Changes to storage immediately sync across Chrome instances
 - Storage is cleared when timer expires or is manually stopped
 
+### Commit Message Convention
+Follow the Conventional Commits standard for all commit messages:
+
+**Format:**
+```
+<type>(<optional scope>): <description>
+
+<optional body>
+
+<optional footer>
+```
+
+**Types:**
+- `feat`: New features
+- `fix`: Bug fixes  
+- `refactor`: Code restructuring without changing behavior
+- `style`: Code formatting changes
+- `test`: Test-related changes
+- `docs`: Documentation updates
+- `build`: Build system or dependency changes
+- `chore`: Miscellaneous tasks
+
+**Guidelines:**
+- Use imperative, present tense ("add" not "added" or "adds")
+- Do not capitalize first letter of description
+- Do not end description with a period
+- Use `!` after type/scope for breaking changes
+- Keep description under 50 characters when possible
+
+**Examples:**
+- `feat: add myntra.com to blocklist`
+- `fix: prevent timer activation with empty input`
+- `docs: update blocklist instructions in CLAUDE.md`
+- `refactor(popup): simplify timer display logic`
+
 ### Key Code Patterns
 - URL validation and hostname extraction in `isBlockedSite()`
 - Message passing between popup and background script for state updates
