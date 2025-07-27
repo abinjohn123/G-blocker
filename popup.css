@@ -2,7 +2,7 @@ body {
   width: 280px;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   background: #f8f9fa;
 }
 
@@ -26,7 +26,7 @@ h2 {
   padding: 15px;
   background: white;
   border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .toggle-label {
@@ -55,7 +55,7 @@ h2 {
 }
 
 .toggle-slider::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 20px;
   height: 20px;
@@ -64,7 +64,7 @@ h2 {
   top: 2px;
   left: 2px;
   transition: all 0.3s ease;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .toggle-input:checked + .toggle-slider {
@@ -84,7 +84,7 @@ h2 {
   background: white;
   padding: 15px;
   border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   margin-bottom: 15px;
 }
 
@@ -116,11 +116,12 @@ h2 {
 
 .timer-display {
   background: white;
-  padding: 20px;
+  padding: 0;
   border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   margin-bottom: 15px;
   text-align: center;
+  overflow: hidden;
 }
 
 .countdown {
@@ -128,7 +129,7 @@ h2 {
   font-weight: 600;
   color: #1a73e8;
   margin-bottom: 5px;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
 }
 
 .timer-label {
@@ -154,11 +155,25 @@ h2 {
   color: #137333;
 }
 
+.timer-display .status {
+  margin: 0;
+  border-radius: 8px 8px 0 0;
+  border-bottom: 1px solid #f1f3f4;
+}
+
+.timer-display .status.active {
+  border-bottom: 1px solid #dcfce7;
+}
+
+.timer-content {
+  padding: 20px;
+}
+
 .blocked-sites {
   background: white;
   padding: 15px;
   border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .blocked-sites h3 {
