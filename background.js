@@ -5,7 +5,9 @@ const blockedSites = [
   "twitter.com",
   "x.com",
   "reddit.com",
-  "pinterest.com"
+  "pinterest.com",
+  "myntra.com",
+  "nykaa.com"
 ];
 
 const isBlockedSite = (url) => {

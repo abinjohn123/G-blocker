@@ -42,7 +42,13 @@ This extension uses vanilla JavaScript with no build tools, bundlers, or package
 3. Testing functionality manually in browser
 
 ### Adding Blocked Sites
-To add new sites to the blocklist, edit the `blockedSites` array in `background.js`. The domain matching automatically handles www. prefixes.
+To add new sites to the blocklist, you must update THREE locations:
+
+1. **`background.js`** - Add domain to the `blockedSites` array (lines 1-9) for blocking logic
+2. **`manifest.json`** - Add `"https://*.domain.com/*"` to `host_permissions` array for extension permissions
+3. **`popup.html`** - Add display name to the blocked sites list (around line 42-49) for UI
+
+The domain matching automatically handles www. prefixes.
 
 ### Storage Architecture
 The extension uses Chrome's sync storage API for cross-device persistence:

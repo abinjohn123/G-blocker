@@ -12,6 +12,8 @@
     "https://*.x.com/*",
     "https://*.reddit.com/*",
     "https://*.pinterest.com/*",
+    "https://*.myntra.com/*",
+    "https://*.nykaa.com/*",
     "https://*.manifoldkerala.com/*"
   ],
   "background": {
